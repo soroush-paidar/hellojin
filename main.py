@@ -1,6 +1,5 @@
-
-import google.generativeai as genai
 import os
+import google.generativeai as genai
 import pyperclip
 import datetime
 genai.configure(api_key="AIzaSyC43Ub5GyFBhtvIAWOwGuqRyXYnIg2U2i0")
@@ -25,7 +24,6 @@ with open("log.txt", "a") as myfile:
     myfile.write("\n \n Conversation: " + date)
 
 groq_client = Groq(api_key="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")
-openai.api_key = APIKEY
 
 model_id = 'gpt-4o'
 
