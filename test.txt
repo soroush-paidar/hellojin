@@ -1,0 +1,1 @@
+this is a text file. text files have the extention '.txt' and are written like code files, so there is no formatting per se.
