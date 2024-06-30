@@ -25,7 +25,7 @@ with open("log.txt", "a") as myfile:
     myfile.write("\n \n Conversation: " + date)
 
 groq_client = Groq(api_key="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")
-openai.api_key = 'sk-proj-5lDmDoW22Ly07mDuP1NnT3BlbkFJYp5GALyK9pJX3tKubzCq'
+openai.api_key = APIKEY
 
 model_id = 'gpt-4o'
 
