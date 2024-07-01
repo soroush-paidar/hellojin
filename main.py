@@ -68,27 +68,24 @@ def get_clipboard_text():
 
 def summmarize_text_file(): ## Not yet functional
     filename = input("What is the file called? ")
-    try:
-        textfile = open(filename)
-        prompt = textfile
+    textfile = open(filename)
+    prompt = textfile
 
-        sys_msg = (
-            'Summarize the input'
-        )
+    sys_msg = (
+        'Summarize the input'
+    )
 
-        function_conv = [{'role': 'system', 'content': sys_msg},
-                         {'role': 'user', 'content': prompt}]
+    function_conv = [{'role': 'system', 'content': sys_msg},
+                     {'role': 'user', 'content': prompt}]
 
-        chat_completion = groq_client.chat.completions.create(messages=function_conv, model='llama3-70b-8192')
-        response = chat_completion.choices[0].message
+    chat_completion = groq_client.chat.completions.create(messages=function_conv, model='llama3-70b-8192')
+    response = chat_completion.choices[0].message
 
-        return response.content
+    return response.content
 
 
-        function_resp = summmarize_text_file(prompt)
-        print(function_resp)   
-    except:
-        print("File does not exist.")
+    function_resp = summmarize_text_file(prompt)
+    print(function_resp)   
     
     
 
