@@ -1,8 +1,6 @@
 import os
-import google.generativeai as genai
 import pyperclip
 import datetime
-genai.configure(api_key="AIzaSyC43Ub5GyFBhtvIAWOwGuqRyXYnIg2U2i0")
 
 
 import openai
